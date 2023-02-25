@@ -5,15 +5,19 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		String str = sc.nextLine();
-		String[] arrStr = str.split(" ");
-
-		for (int i = 0; i < arrStr.length; i++) {
-			System.out.println(arrStr[i]);
-			if (arrStr[i].equals("q")) {
+		int overSum = sc.nextInt();
+		int sum = 0;
+		int maxNum = 0;
+		
+		for (int i = 1; sum <= overSum; i++) {
+			
+			if (sum >= overSum) {
 				break;
 			}
+			maxNum = i;
+			sum += i;
 		}
+		System.out.println(maxNum);
 	}
 
 }
