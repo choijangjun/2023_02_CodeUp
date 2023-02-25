@@ -5,33 +5,18 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-<<<<<<< HEAD
-		int maxNum1 = sc.nextInt();
-		int maxNum2 = sc.nextInt();
-		
-		for(int i = 1; i <= maxNum1; i++) {
-			for(int x = 1; x <= maxNum2; x++) {
-				System.out.println(i+" "+x);
+		// dan을 16진수로 받아 와야한다. o
+		String dan = sc.nextLine();
+		// dan을 다시 10진수로 바꾼다.o
+		int num = Integer.valueOf(dan, 16);
+		System.out.println(num);
 				
-=======
-		int overSum = sc.nextInt();
-		int sum = 0;
-		int maxNum = 0;
-		
-		for (int i = 1; sum <= overSum; i++) {
-			
-			if (sum >= overSum) {
-				break;
->>>>>>> b3ef92297d245288815f324a1854f96e7d6f2066
-			}
-			maxNum = i;
-			sum += i;
+		for (int i = 1; i <= 15; i++) {
+			// 10진수 구구단 구현
+			System.out.printf("%x * %x = %x\n", num, i, num * i);
+			//이걸 16진수 구구단으로 바꾼다.
 		}
-<<<<<<< HEAD
 
-=======
-		System.out.println(maxNum);
->>>>>>> b3ef92297d245288815f324a1854f96e7d6f2066
 	}
 
 }
