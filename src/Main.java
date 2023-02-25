@@ -2,19 +2,24 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		// 1~9중 정수가 하나 입력되면 일 부터 그 수까지 띄어쓰기
+		// 간격으로 출력하며
+		// 3, 6, 9대신 X가 출력된다.
 
 		Scanner sc = new Scanner(System.in);
 
-		// dan을 16진수로 받아 와야한다. o
-		String dan = sc.nextLine();
-		// dan을 다시 10진수로 바꾼다.o
-		int num = Integer.valueOf(dan, 16);
-	
-				
-		for (int i = 1; i <= 15; i++) {
-			// 10진수 구구단 구현
-			System.out.printf("%X * %X = %X\n", num, i, num * i);
-			//이걸 16진수 구구단으로 바꾼다.
+		// 정수를 하나 입력받는다. o
+		int num = sc.nextInt();
+
+		// 입력받은 정수가 나올 때 까지 일 부터 차례대로 출력한다.o
+		for (int i = 1; i <= num; i++) {
+			if (i == 3 || i == 6 || i == 9) {
+				System.out.printf("X ");
+			} else {
+				System.out.printf(i + " ");
+
+			}
+
 		}
 
 	}
